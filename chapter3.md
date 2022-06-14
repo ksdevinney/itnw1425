@@ -91,3 +91,84 @@ Unlike IPv4, IPv6 eliminates broadcasting
 With IPv6, computer can autoconfigure its own link local IP address without a DHCPv6 server
 
 ## Ports and Sockets
+
+Port: number assigned to a process that can receive data; used to find a process running on a computer
+
+Socket: host's IP:process's port
+
+Socket opens when the host receives a request to communicate; socket closes when session is complete
+
+Well-known ports: 0 through 1023 (for well-known utlities such as HTTP)
+Registered ports: 1024 through 49151 (nonstandard assignments with increased security)
+Dynamic and private ports: 49152 through 65535, dynamic: assigned as a need arises; private: assigned by a network administrator
+
+TFTP: trivial file transfer protocol, used automatically by computers during boot up to request configuration files from another computer on the local network
+
+NTP: network time protocol, synchronize clocks of computers on the same network
+
+LDAP: lighweight directory access protocol, accessing network-based dictionaries
+
+SMB: server message block, for sharing files on a network
+
+SIP: session initiaon protocol, makes an initial connection between hosts but doesn't participate in data transfer
+
+H.323: same as above, replaced by SIP
+
+## Domain Names and DNS
+
+Domain names: because it's easier than looking up a website by IP address
+
+Common domains: com, edu, gov, net, org, mil, biz, info
+
+FQDNs must be translated to an IP address to find the referenced computer
+
+Name resolution: discovering the IP address using the FQDN
+
+DNS: domain name system, associates computer names with IP addresses
+Made up of namespaces (entire collection of computer names and associates IP addresses), name servers (computers that hold namespace databases), and resolvers (client that requests information from DNS servers)
+
+DNS namespace databases are stored on servers around the world. DNS will not experience catastrophic failures if a few servers experience errors
+
+DNS zone: domains an organization is responsible for managing
+
+Authoritative server: authority on computer names and IP addresses
+
+Name Servers
+Primary DNS server: authoritative name server
+Secondary DNS server: backup authoritative name server
+Caching DNS server: accesses public DNS data and caches the DNS information it collects
+Forwarding DNS server: receives DNS queries; provides the information if it already has it, forwards it to another server to resolve if not
+
+Server types can conexist on the same machine
+
+Recursive query: query that requires resolution (either the answer or "not found")
+Iterative query: does not demand resolution, information only passed from servers if they have it
+
+Information on DNS servers is kept in resource records:
+Address: name-to-address mapping for IPv4
+AAAAddress: name-to-address mapping for IPv6
+CNAME: alternate names for a host
+PTR: pointer, for reverse lookups (provides a host name from IP address)
+NS: indicates the authoritative server for a domain
+MX: for email servers and traffic
+SRV: hostname and port of a computer that hosts a specific network (besides email)
+TXT: holds text, SPF (identifies email servers allowed to send mail) and DKIM (verifies the domain of a email's sender) 
+
+BIND (Berkeley Internet Name Domain) is the most popular DNS server software
+
+Firewall: dedicated device or software that selectively filters or blocks traffic between networks
+Area between two firewalls is a DMZ
+
+## Troubleshooting
+
+Start with Event Viewer
+
+Command-line tools: 
+ping verifies TCP/IP is installed, bound to the NIC, configured correctly, and communicating with the network
+ipconfig: shows current TCP/IP addressing and domain name (ifconfig on Linux)
+nslookup: query the DNS database and find the host name of a device using its IP address (dig for Linux and MacOS)
+
+Common network issues:
+Incorrect time: TNP time source is not reliable
+DHCP issues: DHCP scope should be large enough to account for clients the network must support
+Network Connection Configuration Issues: incorrect netmask, incorrect gateway, duplicate IP address, names not resolving
