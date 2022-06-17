@@ -92,3 +92,107 @@ Maximum size of an IP packet is larger than Ethernet MTU- large packets are divi
 
 ## Routers
 
+Routers join two or more networks and pass packets between them
+
+All routers can:
+* connect dissimilar networks (LAN and WAN)
+* interpret layer 3 and layer 4 addressing
+* determine the most efficient path for data to take
+* reroute traffic if the first choice path is down
+
+Routers can also:
+* filter broadcast transmissions
+* act as a simple firewall
+* support local and remote connectivity
+* provide high network fault tolerance
+* monitor and report network traffic
+* diagnose internal connectivity problems
+
+Router categories:
+* Core routers: located inside networks within the same autonomous system (group of networks operated by the same organization)
+* Edge routers: connect an autonomous system with an outside network
+* Exterior router: outside the autonomous system
+
+### Multilayer Switches
+
+Layer 3 switch: capable of interpreting layer 3 data, works like a router
+
+Layer 4 switch: interprets layer 4 data, operate between layer 4 and layer 7; perform advanced filtering, keep statistics, and provide security
+
+Both can work the same way???
+
+### Routing Tables
+
+Database that holds information about where hosts are located and the most efficient way to reach them
+
+Router's network ports connect to different networks, each network connection is assigned an interface ID, the router belongs to every network it connects to
+
+Routing table identifies which network a host belongs to, and the best next hop to get there
+
+### Routing Path Types 
+
+Static Routing: configured by a network administrator, directs messages along specific paths in a network; can't account for network issues (congestion, moved devices, failed connections)
+
+Dynamic routing: router automatically calculates the best path between two networks, this information goes in the routing table; can reroute if there are network issues
+
+### Route Command
+
+Allows you to view the host's routing table, command line tool
+
+Workstations have relatively small routing tables, internet backbone routers may have hundreds of thousands of entries
+
+### Routing Metrics
+
+Finding the best path to take
+
+May use: 
+* Hop counts
+* Bandwidth
+* Latency (delay) on a path
+* Load
+* MTU
+* Routing cost
+* Reliability
+* Network topology
+
+### Determining Best Path
+
+Routers communicate through routing protocols to determine the best path
+
+Reliability and priority of routing protocol data is based on:
+* Administrative distance: number indicating reliability, assigned by default; can be changed by a network administrator
+* Convergence time: time it takes to recognize a best path in the even of a network change
+* Overhead: burden placed on underlying network to support the protocol
+
+### Interior and Exterior Gateway Protocols
+
+Interior Gateway Protocols: routing protocols used by interior routers and edge routers within autonomous systems
+
+* Distance vector: calculate the best path to a destination on the basis of the distance to that destination; some use only the number of hops to a destination, others take network traffic into consideration
+* Link-state: routers communicate beyond neighboring routers, then independently map the network and determine the best path between itself and the destination node; adapt more quickly to network changes
+
+Exterior Gateway Protocols: used by edge routers and exterior routers
+
+* Routing Information Protocol: **outdated** distance vector protocol; simple and stable; limited metrics, excessive overload, poor convergence time, limited network sze, slower and less secure
+
+* Open Shortest Path First: supports large networks, uses complex algorithms to calculate more efficient test paths, shared data, low overhead and fast convergence, stable, supported by all modern routers
+
+* Intermediate System to Intermediate System: similar to OSPF, but for core routers only
+
+* Enhanced Interior Gateway Routing Protocol: distance vector protocol that also includes some of the features of link state; optimized for Cisco routers but available to all
+
+* Border Gateway Protocol: **only current protocol** spans multiple autonomous systems and is used by edge and exterior routers on the internet; uses path-vector routing protocol, efficient, and customizable
+
+### Troubleshooting
+
+netstat: displays TCP/IP statistics (port where TCP/IP is running, network connections currently established, how many messages have been handled since a network interface was activated, how many data errors have occurred on a network interface)
+
+tracert/traceroute: uses ICMP echo requests to trace the path from one networked node to another
+
+pathping: sends pings to each hop along a route
+
+tcpdump: packet sniffer, captures traffic that crosses a computer's network interface
+
+Duplicate MAC addresses (rare, but happens; fixable by updating device configuration)
+Hardware failures: use tracert or traceroute to track down problematic routers, use ping to test network connectivity
+Neighbor discovery: managed by the ARP, can be fixed by flushing the ARP table on a device experiencing issues
