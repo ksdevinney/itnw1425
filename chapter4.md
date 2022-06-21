@@ -196,3 +196,11 @@ tcpdump: packet sniffer, captures traffic that crosses a computer's network inte
 Duplicate MAC addresses (rare, but happens; fixable by updating device configuration)
 Hardware failures: use tracert or traceroute to track down problematic routers, use ping to test network connectivity
 Neighbor discovery: managed by the ARP, can be fixed by flushing the ARP table on a device experiencing issues
+
+***
+
+Quiz
+
+4. Which protocol's header would a layer 4 device read and process? TCP
+
+Which routing protocol does an exterior router use to collect data to build its routing tables? BGP
