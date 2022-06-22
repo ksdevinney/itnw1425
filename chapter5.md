@@ -72,3 +72,35 @@ Two different methods for inserting twisted-wire pairs into RJ-45 plugs: T568A a
 Use the same standard on every plug on your network
 Crossover cable: reverses the transmit and receive wires to connect PC to PC or switch to swtich
 Rollover cable: reverses all wires to create a mirror image; connect a computer to router
+
+Power over Ethernet- twisted pair ethernet connections can supply power (this is how landlines work), useful for nodes far from power recepticles or that need a steady source of power
+Provides relatively small amounts of power, but enough to power certain devices (like a wireless access point)
+
+Cable's category determines the fastest network speed it can support
+
+## Fiber Optic Cable
+
+Data is transmitted through glass or plastic core of the cable, sent via laser (long distances) or LED (short distances), core is surrounded by glass or plastic cadding which reflects light back to the core (allows cables to bend without sacrificing signal)
+
+Fiber optic cables can contain hundreds of fibers, or just a few, depending on their purpose
+
+Each strand of fiber transmits in only one direction, two strands are needed for duplex communication
+
+compared to copper, fiber optic cable allows:
+* higher throughput
+* high noise resistance
+* excellent security
+* can carry signals for longer without requiring a repeater
+
+More expensive than twisted pair, requires special equipment for splicing
+
+Single mode fiber: narrow core, uses laser light and reflects very little, can accomodate high bandwidths and long distances; mostly used for longer connections
+
+Multimode fiber: larger core, many pulses of LED or laser travel at various angles; more prone to attenuation so not suited to longer distances (more than a few km); less expensive than SMF
+
+Ferrule: extended tip of a connector that makes contact with receptacle in jack
+UPC: extensively polished to created a rounded tip, allows two fibers to meet and increases efficiency
+APC: also polished, end faces are placed at an angle to each other
+
+Media conversion must occur if both copper and fiber media are used
+Media converters complete the physical connection, convert electrical signals to light (and vice versa)
