@@ -104,3 +104,46 @@ APC: also polished, end faces are placed at an angle to each other
 
 Media conversion must occur if both copper and fiber media are used
 Media converters complete the physical connection, convert electrical signals to light (and vice versa)
+
+Hot swappable: hardware that can be updated without disrupting operations
+Transceivers: modular interfaces
+
+GBIC: standard Ethernet interface from the 90s, replaced by:
+* SFP (more compact)
+* XFP (supports up to 10Gbps)
+* SPF+ (supports up to 16Gbps)
+* QSFP (supports 4 channels in a receiver and up to 40Gbps)
+* QSFP+ (up to 112Gbps)
+* CFP (for 100 Gbps networks)
+
+Transceivers include 2 ports for full-duplex communication, **bidirectional** fiber carries data in both directions
+
+### Common Fiber Cable Problems
+
+* Fiber type mismatch: connecting cables with different core widths or types
+* wavelength mismatch: different cords use different wavelengths, transmissions are optimized for certain types of cables
+* dirty connectors: dirt and dust block light
+
+## Troubleshooting Tools
+
+Lights on device network ports:
+Steady light: connectivity
+Blinking light: activity
+Red or amber: problems
+
+Tone generator: issues a signal on a wire
+Tone locator (probe): emits a tone when it detects electrical activity on a wire
+
+Multimeter: can measure circuit's resistance, voltage, and impedance
+
+Cable continuity tester: measures whether or not cable is carrying a signal to its destination; base unit connects to one end of cable and emits a voltage, remote unit at other end detects a voltage
+
+Cable performance tester: can measure the distance to a connectivity device, attenuation along a cable, crosstalk, termination resistance and impedance; issue pass/fail ratings for connectivity standards, store or print testing results, graphically represent crosstalk and attenuation 
+
+Optical power meter: measures the amount of light power transmitted on a fiber optic line
+
+### Quiz
+
+Patch cables for a government office: green/white wire goes in first pin
+
+Gigabit ethernet: supported by category 5e, 6a, 7
