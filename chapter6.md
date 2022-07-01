@@ -52,3 +52,16 @@ RFID: uses electromagnetic fields to store data on a small chip that can transmi
 * passive reader active tag: battery-powered tag actively transmits data at regular intervals, can work up to 200m away
 * active reader active tag: reader interacts with battery-powered tag
 
+NFC: form of RFID, transfers data over short distances; do not require power of their own
+
+Wireless USB: operates on a relatively uncrowded band, requires little power and has ~10m range
+
+IR: collects data through sensors, uses wavelength just longer than red (invisible); requires unobstructed line of sight between transmitter and receiver, dust can obstruct
+
+## WLAN Standards
+
+On layers 1 and 2
+
+WiFi- most popular WLAN standard
+
+### Access Method
