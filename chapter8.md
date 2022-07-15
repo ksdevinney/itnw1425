@@ -24,3 +24,14 @@ CIDR: identifies network and host bits in an IP; uses IP address followed by / a
 Subnetting is "classless addressing", borrowed bits from IP address represent network information
 
 Administrator programs each interface on the router with the network ID and subnet mask for its subnet
+
+Variable Length Subnet Masking allows subnets to be divided into smaller groups until each subnet is the same size as the necessary IP address space
+Create the largest subnet first, then next largest, and so on
+Not a good idea to use 100% of network space, need to allow room for growth
+
+IPv6 subnetting: does not use classes, does not use subnet masks, one subnet is capable of supplying many IPv6 addresses
+
+## VLANs
+
+Can use managed switches and VLANs to segment a network (instead of using routers)
+
