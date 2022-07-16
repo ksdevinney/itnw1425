@@ -35,3 +35,21 @@ IPv6 subnetting: does not use classes, does not use subnet masks, one subnet is 
 
 Can use managed switches and VLANs to segment a network (instead of using routers)
 
+Unmanaged switch: no IP address assigned
+
+Managed switch: can be configured, assigned IP addresses, ports can be partitioned for different networks; VLANS can only be implemented through managed switches
+
+Switches add a tag to ethernet frames to determine which transmissions belong to each VLAN
+
+Access point: connects switch to endpoint (workstation)
+
+Trunk port: connects switch to another switch 
+Trunk line carries traffic for multiple VLANs
+
+VLANs usually assigned their own subnnet of IP addresses
+
+* default VLAN: preconfigured, includes all ports
+* native VLAN: receives untagged frames from untagged ports, should be changed to an unused VLAN for security reasons
+* data VLAN: carries user-generated traffic
+* management VLAN: can provide administrative access to a switch
+* voice VLAN: for VoIP traffic
