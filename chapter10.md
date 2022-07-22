@@ -71,3 +71,50 @@ Network Access Control: network policies to determine the level and type of acce
 An *agent* may need to be installed on a device before it can be authenticated
 Nonpersistent agent: uninstalls after authentication is completed
 Persistent agent: permanently installed, may provide additional security measures
+
+## Access Control Technologies
+
+Authentication services and protocols
+
+Active directory: account information maintained on a server
+LDAP compliant
+
+Outdated authentication protocols: Password Authentication Protocol (sends without encryption), Challenge Handshake Authentication Protocol, MS-CHAP, MS CHAP v2
+
+Kerberos: default authentication protocol on the active directory; uses key encryption to verify identity and securely exchange information
+* Authentication service: lets clients in
+* ticket granting service: issues "tickets" for authenticated clients to access services on the network
+
+Single sign-on: client signs on one time to access multiple systems or resources
+May require an additional verification for added security (ex 2FA)
+MFA: requires information from two or more categories
+
+RADIUS: remote authentication dial-in user service, authentication and authorization are the same process
+only encrypts the password in transmissions
+
+TACACS+: offers the option of separating authentication, authorization, and audtiting capabilities
+relies on TCP at the transport layer
+installed on a router or a switch
+encrypts all information for AAA
+
+## Wireless Network Security
+
+WEP used OSA (no authentication key) or SKA (shared key for all clients)
+
+802.11i = improvement
+
+WPA incorportated TKIP
+* message integrity/packet authentication
+* key distribution
+* encryption
+
+WPA2
+* message integrity
+* encryption: uses AES, faster and more secure than TKIP
+
+WPA has personal and enterprise versions
+
+Personal: pre-shared key; enter a passcode for your device to enter the network
+Enterprise: additional security measures, RADIUS + EAP
+
+EAP...
