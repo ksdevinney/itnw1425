@@ -52,7 +52,6 @@ Traffic shaping: manipulating certain characteristics of packets, data, or conne
 Traffic policing: last two from the list
 Many ISPs use traffic throttling to slow down high-bandwidth users
 
-
 Delay sensitive vs loss tolerant ? 
 
 Quality of service: adjusting priority to various types of transmissions
@@ -116,3 +115,7 @@ Purpose is to ensure business continuity
 cold site: tools necessary to rebuild a network, but not ready for immediate use
 Warm site: tools necessary to rebuild a network, some pieces are ready to use
 hot site: tools are all correctly configured, updated, and connected to match the network's current state
+
+Which of the following features of a network connection between a switch and server is not improved by link aggregation? **speed**
+
+One of your coworkers downloaded several, very large video files for a special project she's working on for a new client. When you run your network monitor later this afternoon, what list will your coworker's computer likely show up on? **top listeners**
