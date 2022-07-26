@@ -118,3 +118,7 @@ Personal: pre-shared key; enter a passcode for your device to enter the network
 Enterprise: additional security measures, RADIUS + EAP
 
 EAP...
+
+### Quiz
+
+4. Which of the following features is common to both an NGFW and traditional firewalls? **user authentication**
