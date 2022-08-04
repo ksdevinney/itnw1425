@@ -73,3 +73,17 @@ MPLS: multi-protocol label switching
 Uses packet-switched technologies over circuit-switched
 
 ## Wireless WANs
+
+Cellular: originally designed for analog phone service
+* 1G: analog
+* 2G: digital, allowed for texting, speed limited to 240 Kbps
+* 3G: used packet switching for data, 385 Kbps
+* 4G: packet switching for data and voice
+* 5G: doesn't exist yet
+GSM: uses TDMA (similar to TDM but comes from different sources)
+CDMA: signal over a wider bandwidth
+
+Satellite: information transmitted to an uplink transmitter to an orbiting satellite
+Transponder receives the uplink, transmits to Earth-based downlink receiver
+Downlink received on Earth by dish-shaped antenna
+Signals can be exchanged with satellites as long as there is an unobstructed view of the sky
