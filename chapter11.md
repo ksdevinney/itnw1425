@@ -82,7 +82,7 @@ CARP: allows a pool of computers to share IP addresses
 Backup: copy of data or files created for archiving or safekeeping
 Full: backs up everything every time
 Incremental: backs up only changed data since last backup
-Differential: dad that has changed since last full backup
+Differential: data that has changed since last full backup
 
 Snapshot: frequently saved incremental backup
 

@@ -110,7 +110,7 @@ LDAP: lighweight directory access protocol, accessing network-based dictionaries
 
 SMB: server message block, for sharing files on a network
 
-SIP: session initiaon protocol, makes an initial connection between hosts but doesn't participate in data transfer
+SIP: session initiation protocol, makes an initial connection between hosts but doesn't participate in data transfer
 
 H.323: same as above, replaced by SIP
 
